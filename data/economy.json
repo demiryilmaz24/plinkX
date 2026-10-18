@@ -1,0 +1,1179 @@
+{
+ "format": 1,
+ "x_value": 10,
+ "fall_time": 2.4,
+ "rows": 8,
+ "min_place_row": 2,
+ "intervals": {
+  "M": {
+   "net": 2.5,
+   "positive": true,
+   "max": true
+  },
+  "W": {
+   "net": 1.2,
+   "positive": true,
+   "max": false
+  },
+  "L": {
+   "net": -0.5,
+   "positive": false,
+   "max": false
+  },
+  "E": {
+   "net": -0.2,
+   "positive": false,
+   "max": false
+  }
+ },
+ "board_levels": [
+  [
+   0.165,
+   0.656,
+   2.4
+  ],
+  [
+   0.173,
+   0.788,
+   2.473
+  ],
+  [
+   0.182,
+   0.921,
+   2.664
+  ],
+  [
+   0.19,
+   1.054,
+   2.922
+  ],
+  [
+   0.198,
+   1.186,
+   3.059
+  ],
+  [
+   0.206,
+   1.302,
+   3.137
+  ],
+  [
+   0.214,
+   1.385,
+   3.214
+  ],
+  [
+   0.223,
+   1.468,
+   3.291
+  ],
+  [
+   0.231,
+   1.602,
+   3.369
+  ],
+  [
+   0.239,
+   1.767,
+   3.446
+  ],
+  [
+   0.248,
+   1.933,
+   3.687
+  ],
+  [
+   0.256,
+   2.099,
+   3.8
+  ],
+  [
+   0.264,
+   2.203,
+   3.912
+  ],
+  [
+   0.272,
+   2.277,
+   4.025
+  ],
+  [
+   0.28,
+   2.35,
+   4.138
+  ],
+  [
+   0.289,
+   2.424,
+   4.25
+  ]
+ ],
+ "ball_level": {
+  "mult_growth": 1.12,
+  "cost_base": 3.6,
+  "cost_growth": 1.3
+ },
+ "board_level_cost": {
+  "base": 17.0,
+  "growth": 2.2
+ },
+ "start_cash": 24.0,
+ "days": [
+  {
+   "day": 1,
+   "target": 21000,
+   "price": 1.1,
+   "ball_cap": 12,
+   "board_cap": 3
+  },
+  {
+   "day": 2,
+   "target": 69000,
+   "price": 4.1,
+   "ball_cap": 15,
+   "board_cap": 4
+  },
+  {
+   "day": 3,
+   "target": 290000,
+   "price": 4.0,
+   "ball_cap": 18,
+   "board_cap": 5
+  },
+  {
+   "day": 4,
+   "target": 660000,
+   "price": 3.0,
+   "ball_cap": 21,
+   "board_cap": 6
+  },
+  {
+   "day": 5,
+   "target": 1100000,
+   "price": 3.1,
+   "ball_cap": 24,
+   "board_cap": 7
+  },
+  {
+   "day": 6,
+   "target": 3300000,
+   "price": 2.7,
+   "ball_cap": 27,
+   "board_cap": 8
+  },
+  {
+   "day": 7,
+   "target": 5600000,
+   "price": 2.5,
+   "ball_cap": 30,
+   "board_cap": 9
+  },
+  {
+   "day": 8,
+   "target": 12000000,
+   "price": 2.0,
+   "ball_cap": 33,
+   "board_cap": 10
+  },
+  {
+   "day": 9,
+   "target": 22000000,
+   "price": 1.7,
+   "ball_cap": 36,
+   "board_cap": 11
+  },
+  {
+   "day": 10,
+   "target": 46000000,
+   "price": 1.7,
+   "ball_cap": 39,
+   "board_cap": 12
+  }
+ ],
+ "free_job": {
+  "pay": 1.0,
+  "duration": 4.0
+ },
+ "upgrades": {
+  "air": {
+   "base": 4,
+   "per_level": 2,
+   "max_level": 14,
+   "cost_base": 9,
+   "cost_growth": 1.55,
+   "unlock_day": 1,
+   "level_day_caps": [
+    3,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    12,
+    13,
+    14
+   ]
+  },
+  "batch": {
+   "sizes": [
+    1,
+    3,
+    5,
+    10,
+    20
+   ],
+   "costs": [
+    0,
+    7,
+    24,
+    170,
+    1000
+   ],
+   "unlock_days": [
+    1,
+    1,
+    1,
+    3,
+    5
+   ]
+  },
+  "auto_unlock": {
+   "cost": 30,
+   "unlock_day": 1
+  },
+  "auto_speed": {
+   "base_interval": 0.6,
+   "factor": 0.85,
+   "max_level": 14,
+   "cost_base": 17,
+   "cost_growth": 1.6,
+   "unlock_day": 1,
+   "level_day_caps": [
+    4,
+    6,
+    8,
+    10,
+    12,
+    14,
+    14,
+    14,
+    14,
+    14
+   ]
+  },
+  "auto_batch": {
+   "max_level": 3,
+   "cost_base": 90,
+   "cost_growth": 4.0,
+   "unlock_day": 1,
+   "level_day_caps": [
+    1,
+    1,
+    2,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3
+   ]
+  },
+  "polish": {
+   "per_level": 0.15,
+   "max_level": 6,
+   "cost_base": 290,
+   "cost_growth": 2.4,
+   "unlock_day": 3,
+   "level_day_caps": [
+    0,
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    6,
+    6
+   ]
+  },
+  "sockets": {
+   "base": 2,
+   "max_level": 6,
+   "cost_base": 23,
+   "cost_growth": 2.6,
+   "unlock_day": 1,
+   "level_day_caps": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    6,
+    6,
+    6,
+    6
+   ]
+  }
+ },
+ "rarities": [
+  "common",
+  "rare",
+  "epic",
+  "legendary"
+ ],
+ "ball_slot": {
+  "cost_base": 29,
+  "cost_growth": 1.8,
+  "weights": [
+   55,
+   30,
+   12,
+   3
+  ],
+  "sell": [
+   0.35,
+   0.7,
+   1.4,
+   3.0
+  ],
+  "max_mastery": 3
+ },
+ "peg_slot": {
+  "cost_base": 9,
+  "cost_growth": 1.45,
+  "weights": [
+   52,
+   31,
+   13,
+   4
+  ],
+  "sell": [
+   0.35,
+   0.7,
+   1.4,
+   3.0
+  ],
+  "dup_refund": 0.5,
+  "stack_caps": [
+   4,
+   3,
+   2,
+   1
+  ]
+ },
+ "balls": [
+  {
+   "id": "demir",
+   "rarity": "common",
+   "starter": true,
+   "loss_mult": 0.92,
+   "star": {
+    "loss_mult": -0.02
+   }
+  },
+  {
+   "id": "cam",
+   "rarity": "common",
+   "w_mult": 1.25,
+   "star": {
+    "w_mult": 0.05
+   }
+  },
+  {
+   "id": "kil",
+   "rarity": "common",
+   "bias": 0.535,
+   "star": {
+    "bias": 0.005
+   }
+  },
+  {
+   "id": "kaucuk",
+   "rarity": "common",
+   "max_mult": 1.5,
+   "star": {
+    "max_mult": 0.1
+   }
+  },
+  {
+   "id": "bakir",
+   "rarity": "common",
+   "pos_mult": 1.1,
+   "star": {
+    "pos_mult": 0.03
+   }
+  },
+  {
+   "id": "miknatis",
+   "rarity": "rare",
+   "bias": 0.55,
+   "pos_mult": 1.12,
+   "star": {
+    "bias": 0.01
+   }
+  },
+  {
+   "id": "volkan",
+   "rarity": "rare",
+   "max_mult": 1.8,
+   "pos_mult": 1.06,
+   "star": {
+    "max_mult": 0.15
+   }
+  },
+  {
+   "id": "altin",
+   "rarity": "rare",
+   "pos_mult": 1.18,
+   "max_mult": 1.2,
+   "star": {
+    "pos_mult": 0.03
+   }
+  },
+  {
+   "id": "ikiz",
+   "rarity": "epic",
+   "split_chance": 0.25,
+   "pos_mult": 1.08,
+   "w_mult": 1.08,
+   "star": {
+    "split_chance": 0.05
+   }
+  },
+  {
+   "id": "kuyruklu",
+   "rarity": "epic",
+   "bias": 0.555,
+   "max_mult": 1.7,
+   "w_mult": 1.12,
+   "star": {
+    "max_mult": 0.1
+   }
+  },
+  {
+   "id": "anka",
+   "rarity": "legendary",
+   "rebirth_chance": 0.4,
+   "pos_mult": 1.35,
+   "loss_mult": 0.85,
+   "star": {
+    "rebirth_chance": 0.05
+   }
+  },
+  {
+   "id": "kara_inci",
+   "rarity": "legendary",
+   "bias": 0.56,
+   "pos_mult": 1.32,
+   "max_mult": 1.3,
+   "star": {
+    "pos_mult": 0.05
+   }
+  }
+ ],
+ "bias_cap": 0.57,
+ "pegs": [
+  {
+   "id": "bakir_civi",
+   "rarity": "common",
+   "add": 0.1
+  },
+  {
+   "id": "yay",
+   "rarity": "common",
+   "bias": 0.7
+  },
+  {
+   "id": "kalkan",
+   "rarity": "common",
+   "loss_mult": 0.7
+  },
+  {
+   "id": "gumus",
+   "rarity": "rare",
+   "add": 0.2
+  },
+  {
+   "id": "ayna",
+   "rarity": "rare",
+   "split": 0.1
+  },
+  {
+   "id": "huni",
+   "rarity": "rare",
+   "bias": 0.85
+  },
+  {
+   "id": "altin_civi",
+   "rarity": "epic",
+   "mult": 1.3
+  },
+  {
+   "id": "yildiz",
+   "rarity": "epic",
+   "max_add": 0.8
+  },
+  {
+   "id": "bilet",
+   "rarity": "legendary",
+   "ticket_chance": 0.0005,
+   "daily_cap": 5
+  },
+  {
+   "id": "elmas",
+   "rarity": "legendary",
+   "mult": 1.6
+  }
+ ],
+ "tickets": {
+  "card_base": 25,
+  "card_step": 10,
+  "jackpot_streak": 4,
+  "jackpot_cash_max_payouts": 25,
+  "jackpot_holes": 3,
+  "jackpot_first_daily_tickets": 2,
+  "first_max_bonus": {
+   "common": 3,
+   "rare": 5,
+   "epic": 8,
+   "legendary": 12
+  },
+  "prestige_base": [
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12
+  ],
+  "prestige_perf_k": 4.0,
+  "prestige_perf_cap": 40,
+  "free_mode_ref_target": 4600000
+ },
+ "tree": [
+  {
+   "id": "start_cash",
+   "branch": "kaynak",
+   "costs": [
+    3,
+    6,
+    12,
+    20,
+    35
+   ],
+   "prereq": null,
+   "pos": [
+    0,
+    0
+   ]
+  },
+  {
+   "id": "free_shots",
+   "branch": "kaynak",
+   "costs": [
+    4,
+    8,
+    15
+   ],
+   "prereq": "start_cash",
+   "pos": [
+    0,
+    1
+   ]
+  },
+  {
+   "id": "job_pay",
+   "branch": "kaynak",
+   "costs": [
+    2,
+    5
+   ],
+   "prereq": "start_cash",
+   "pos": [
+    1,
+    1
+   ]
+  },
+  {
+   "id": "bulk_buy",
+   "branch": "kolaylik",
+   "costs": [
+    3
+   ],
+   "prereq": "free_shots",
+   "pos": [
+    0,
+    2
+   ]
+  },
+  {
+   "id": "layouts",
+   "branch": "kolaylik",
+   "costs": [
+    4
+   ],
+   "prereq": "bulk_buy",
+   "pos": [
+    0,
+    3
+   ]
+  },
+  {
+   "id": "stats",
+   "branch": "kolaylik",
+   "costs": [
+    2
+   ],
+   "prereq": "bulk_buy",
+   "pos": [
+    1,
+    3
+   ]
+  },
+  {
+   "id": "start_ball",
+   "branch": "top",
+   "costs": [
+    5,
+    10,
+    18,
+    30,
+    50
+   ],
+   "prereq": null,
+   "pos": [
+    2,
+    0
+   ]
+  },
+  {
+   "id": "card_size",
+   "branch": "bilet",
+   "costs": [
+    10,
+    22,
+    40
+   ],
+   "prereq": "start_ball",
+   "pos": [
+    2,
+    1
+   ]
+  },
+  {
+   "id": "prestige_bonus",
+   "branch": "bilet",
+   "costs": [
+    10,
+    25,
+    45
+   ],
+   "prereq": "card_size",
+   "pos": [
+    2,
+    2
+   ]
+  },
+  {
+   "id": "auto_ready",
+   "branch": "otomasyon",
+   "costs": [
+    6
+   ],
+   "prereq": null,
+   "pos": [
+    4,
+    0
+   ]
+  },
+  {
+   "id": "auto_speed_perm",
+   "branch": "otomasyon",
+   "costs": [
+    5,
+    12,
+    25
+   ],
+   "prereq": "auto_ready",
+   "pos": [
+    3,
+    1
+   ]
+  },
+  {
+   "id": "air_perm",
+   "branch": "otomasyon",
+   "costs": [
+    5,
+    12,
+    25
+   ],
+   "prereq": "auto_ready",
+   "pos": [
+    4,
+    1
+   ]
+  },
+  {
+   "id": "auto_pay",
+   "branch": "kolaylik",
+   "costs": [
+    4
+   ],
+   "prereq": "air_perm",
+   "pos": [
+    4,
+    2
+   ]
+  },
+  {
+   "id": "start_board",
+   "branch": "tahta",
+   "costs": [
+    6,
+    14,
+    28,
+    50
+   ],
+   "prereq": null,
+   "pos": [
+    6,
+    0
+   ]
+  },
+  {
+   "id": "start_sockets",
+   "branch": "tahta",
+   "costs": [
+    5,
+    15
+   ],
+   "prereq": "start_board",
+   "pos": [
+    6,
+    1
+   ]
+  },
+  {
+   "id": "peg_gift",
+   "branch": "tahta",
+   "costs": [
+    6,
+    16
+   ],
+   "prereq": "start_sockets",
+   "pos": [
+    6,
+    2
+   ]
+  },
+  {
+   "id": "ball_luck",
+   "branch": "koleksiyon",
+   "costs": [
+    8,
+    18,
+    35
+   ],
+   "prereq": null,
+   "pos": [
+    8,
+    0
+   ]
+  },
+  {
+   "id": "ball_slot_cost",
+   "branch": "koleksiyon",
+   "costs": [
+    6,
+    15
+   ],
+   "prereq": "ball_luck",
+   "pos": [
+    7,
+    1
+   ]
+  },
+  {
+   "id": "peg_luck",
+   "branch": "koleksiyon",
+   "costs": [
+    6,
+    14,
+    28
+   ],
+   "prereq": "ball_luck",
+   "pos": [
+    8,
+    1
+   ]
+  },
+  {
+   "id": "peg_slot_cost",
+   "branch": "koleksiyon",
+   "costs": [
+    5,
+    12
+   ],
+   "prereq": "peg_luck",
+   "pos": [
+    8,
+    2
+   ]
+  }
+ ],
+ "tree_effects": {
+  "start_cash": {
+   "per_level": "start cash x2"
+  },
+  "free_shots": {
+   "per_level": 10
+  },
+  "job_pay": {
+   "per_level": 1.0
+  },
+  "start_ball": {
+   "per_level": 3
+  },
+  "auto_speed_perm": {
+   "per_level": 0.08
+  },
+  "air_perm": {
+   "per_level": 2
+  },
+  "start_board": {
+   "per_level": 1
+  },
+  "start_sockets": {
+   "per_level": 1
+  },
+  "peg_gift": {
+   "per_level": 1
+  },
+  "ball_luck": {
+   "weights": [
+    [
+     55,
+     30,
+     12,
+     3
+    ],
+    [
+     48,
+     33,
+     15,
+     4
+    ],
+    [
+     42,
+     35,
+     18,
+     5
+    ],
+    [
+     36,
+     37,
+     21,
+     6
+    ]
+   ]
+  },
+  "ball_slot_cost": {
+   "per_level": 0.15
+  },
+  "peg_luck": {
+   "weights": [
+    [
+     52,
+     31,
+     13,
+     4
+    ],
+    [
+     46,
+     33,
+     16,
+     5
+    ],
+    [
+     40,
+     35,
+     19,
+     6
+    ],
+    [
+     34,
+     37,
+     22,
+     7
+    ]
+   ]
+  },
+  "peg_slot_cost": {
+   "per_level": 0.15
+  },
+  "card_size": {
+   "per_level": 3
+  },
+  "prestige_bonus": {
+   "per_level": 0.15
+  }
+ },
+ "achievements": [
+  {
+   "id": "ilk_atis",
+   "stat": "shots_total",
+   "value": 1,
+   "tickets": 2,
+   "free_mode": false
+  },
+  {
+   "id": "ilk_max",
+   "stat": "max_total",
+   "value": 1,
+   "tickets": 2,
+   "free_mode": false
+  },
+  {
+   "id": "max_100",
+   "stat": "max_total",
+   "value": 100,
+   "tickets": 3,
+   "free_mode": false
+  },
+  {
+   "id": "max_1000",
+   "stat": "max_total",
+   "value": 1000,
+   "tickets": 6,
+   "free_mode": false
+  },
+  {
+   "id": "max_10000",
+   "stat": "max_total",
+   "value": 10000,
+   "tickets": 12,
+   "free_mode": true
+  },
+  {
+   "id": "ilk_jackpot",
+   "stat": "jackpots",
+   "value": 1,
+   "tickets": 4,
+   "free_mode": false
+  },
+  {
+   "id": "jackpot_10",
+   "stat": "jackpots",
+   "value": 10,
+   "tickets": 8,
+   "free_mode": false
+  },
+  {
+   "id": "oto_500",
+   "stat": "auto_shots",
+   "value": 500,
+   "tickets": 3,
+   "free_mode": false
+  },
+  {
+   "id": "oto_10000",
+   "stat": "auto_shots",
+   "value": 10000,
+   "tickets": 6,
+   "free_mode": false
+  },
+  {
+   "id": "nadir_ender",
+   "stat": "rarity_rare",
+   "value": 1,
+   "tickets": 2,
+   "free_mode": false
+  },
+  {
+   "id": "nadir_destansi",
+   "stat": "rarity_epic",
+   "value": 1,
+   "tickets": 4,
+   "free_mode": false
+  },
+  {
+   "id": "nadir_efsanevi",
+   "stat": "rarity_legendary",
+   "value": 1,
+   "tickets": 6,
+   "free_mode": false
+  },
+  {
+   "id": "tum_nadirlikler",
+   "stat": "rarities_owned",
+   "value": 4,
+   "tickets": 5,
+   "free_mode": false
+  },
+  {
+   "id": "top_6",
+   "stat": "ball_types",
+   "value": 6,
+   "tickets": 4,
+   "free_mode": false
+  },
+  {
+   "id": "top_hepsi",
+   "stat": "ball_types",
+   "value": 12,
+   "tickets": 10,
+   "free_mode": false
+  },
+  {
+   "id": "usta_yildiz",
+   "stat": "max_mastery",
+   "value": 3,
+   "tickets": 4,
+   "free_mode": false
+  },
+  {
+   "id": "kar_1",
+   "stat": "run_profit_best",
+   "value": 100000.0,
+   "tickets": 3,
+   "free_mode": false
+  },
+  {
+   "id": "kar_2",
+   "stat": "run_profit_best",
+   "value": 10000000.0,
+   "tickets": 5,
+   "free_mode": false
+  },
+  {
+   "id": "tahta_6",
+   "stat": "board_level_best",
+   "value": 6,
+   "tickets": 3,
+   "free_mode": false
+  },
+  {
+   "id": "tahta_12",
+   "stat": "board_level_best",
+   "value": 12,
+   "tickets": 5,
+   "free_mode": false
+  },
+  {
+   "id": "bilet_civisi",
+   "stat": "peg_tickets",
+   "value": 1,
+   "tickets": 4,
+   "free_mode": false
+  },
+  {
+   "id": "gun_3",
+   "stat": "days_closed",
+   "value": 3,
+   "tickets": 3,
+   "free_mode": false
+  },
+  {
+   "id": "gun_7",
+   "stat": "days_closed",
+   "value": 7,
+   "tickets": 5,
+   "free_mode": false
+  },
+  {
+   "id": "borc_bitti",
+   "stat": "debt_cleared",
+   "value": 1,
+   "tickets": 15,
+   "free_mode": false
+  },
+  {
+   "id": "cilaci",
+   "stat": "jobs_done",
+   "value": 10,
+   "tickets": 1,
+   "free_mode": false
+  },
+  {
+   "id": "serbest_top",
+   "stat": "free_ball_level_best",
+   "value": 60,
+   "tickets": 10,
+   "free_mode": true
+  },
+  {
+   "id": "serbest_tahta",
+   "stat": "free_board_level_best",
+   "value": 16,
+   "tickets": 8,
+   "free_mode": true
+  },
+  {
+   "id": "serbest_kar",
+   "stat": "free_profit_best",
+   "value": 10000000000.0,
+   "tickets": 12,
+   "free_mode": true
+  },
+  {
+   "id": "serbest_prestij",
+   "stat": "free_prestiges",
+   "value": 10,
+   "tickets": 10,
+   "free_mode": true
+  }
+ ],
+ "auto": {
+  "reserve_presets_x": [
+   2,
+   10,
+   50,
+   200,
+   1000,
+   5000,
+   25000,
+   100000,
+   500000
+  ],
+  "default_reserve_index": 0,
+  "launch_stagger": 0.07
+ },
+ "phone": {
+  "ring_secs": 9.0,
+  "boost_secs": 15.0,
+  "boost_speed": 2.0,
+  "boost_air_cap": 200,
+  "good_first": [
+   70,
+   130
+  ],
+  "good_every": [
+   200,
+   320
+  ],
+  "threat_first": [
+   220,
+   340
+  ],
+  "threat_every": [
+   260,
+   420
+  ],
+  "fine_rate": 0.15,
+  "fine_chance_max": 0.6,
+  "collect_leave_x": 10
+ },
+ "free_mode": {
+  "price": 1.7,
+  "board_cap": 16
+ }
+}

@@ -1,98 +1,298 @@
-# Son Bilye
+# Last Marble
 
-Borcunu kapatmak için her gün bir Plinko salonuna giden Tekin'in hikâyesi: 2D Plinko + incremental/idle ilerleme oyunu.
-Godot 4.7 (GDScript), PC. Ana dil **İngilizce** (oyun adı: *Last Marble*); **Türkçe** ana menüdeki dil düğmesinden
-veya Ayarlar'dan seçilebilir. Dil değişince arayüz anında yeniden kurulur, oyun kaldığı yerden sürer.
+**A story-driven 2D Plinko and incremental/idle game developed with Godot 4.7 and GDScript.**
 
-## Çalıştırma
+Last Marble follows Tekin, a man who visits a Plinko arcade every day in an attempt to pay off his debt. Players drop marbles, earn money, purchase upgrades, unlock automation, collect special items, and make financial decisions as the story progresses.
 
-Godot 4.7 ile `project.godot` dosyasını aç ve oynat (F5). Komut satırından:
+The project combines arcade gameplay with incremental progression, economy balancing, interactive story events, and bilingual localization.
+
+## Technical Overview
+
+| Category | Details |
+|---|---|
+| Game Engine | Godot 4.7 |
+| Main Language | GDScript |
+| Additional Tools | Python 3 |
+| Genre | 2D Plinko, Incremental / Idle, Story-driven |
+| Platform | PC |
+| Supported Languages | English and Turkish |
+| Art Style | Pixel art |
+| Save System | Automatic saving every 15 seconds and on exit |
+
+## Key Features
+
+- **Plinko gameplay:** Drop marbles onto a board and earn rewards based on their landing positions.
+- **Incremental progression:** Improve the board, purchase upgrades, and unlock automation.
+- **Debt management:** Manage earnings and daily installment payments while progressing through Tekin's story.
+- **Interactive environment:** Use the calendar, letters, debt ledger, marble collection, and in-game phone.
+- **Character events:** Receive helpful bonuses or payment reminders through phone calls.
+- **Collectibles and achievements:** Unlock marbles, special pegs, and achievements.
+- **Daily progression:** Review statistics at the end of each day and progress through the Ticket Tree.
+- **Bilingual localization:** Switch between English and Turkish without restarting the game or losing progress.
+- **Pixel-perfect scaling:** Integer scaling keeps pixel art and text sharp, including on high-density displays.
+
+## Getting Started
+
+### Requirements
+
+- Godot 4.7
+- A PC capable of running the Godot project
+
+### Running the Game
+
+1. Clone or download this repository.
+2. Open Godot 4.7.
+3. Import the project by selecting `project.godot`.
+4. Press **F5** to start the game.
+
+Alternatively, launch the project from a terminal if Godot is available on your system:
 
 ```bash
-~/Downloads/Godot.app/Contents/MacOS/Godot --path /Users/demiryilmaz/plinlkX
+godot --path .
 ```
 
-Kayıt: `~/Library/Application Support/Godot/app_userdata/Son Bilye/son_bilye_save.json` (her 15 sn ve çıkışta).
+Run this command from the project's root directory.
 
-## Kontroller
+### Save Data
 
-- Oyun **ana menüden** başlar: Devam Et / Yeni Oyun / Ayarlar / Oyundan Çık.
-- **Boşluk** veya **AT** düğmesi: seçili toplu atış miktarı kadar top atar. **Esc**: duraklatma menüsü.
-- Sol: kasa ve **ÖDE** (ilk basışta tek seferlik uyarı), Yükseltme / Otomasyon kartları (tıkla = satın al, açıklama fare üstündeyken), Bilye Cilası işi.
-- Masa: takvim (gün), zarf (hikâye), Borç Defteri (taksitler), bilye kavanozu (koleksiyon) ve **telefon** tıklanabilir.
-  Telefon çalınca (altında arayanın adı yazar) tıkla: iyi karakterler 15 sn **Ateş Modu** hediye eder (hız ×2, hava sınırı yok),
-  Sadık Bey taksiti hatırlatır: o gün hiç ödeme yapılmamışsa kasadaki nakde el koyup taksite yatırır; kısmen ödenmişse
-  **ŞİMDİ ÖDE** (tutar düğmede yazar, ceza yok) ya da **KAPAT** (ceza zarı). Esc = kapat/reddet.
-- Sağ: bilet rozeti, Başarımlar ve Menü, **Top Çarkı** / **Çivi Çarkı** (kasa açma penceresi), bugünkü çiviler + **DİZ**, **GÜNÜ KAPAT**.
-- Gün sonu: özet ve istatistikler → **GÜNÜ BİTİR** → Bilet Ağacı (yalnızca burada) → **N. GÜNÜ BAŞLAT**.
+The game saves progress automatically every 15 seconds and when exiting.
 
-Pencere, ekrana sığan en büyük tam sayı ölçekle açılır (Retina'da 2x); tüm piksel sanat ve yazılar keskin kalır.
+On macOS, the save file is stored under the Godot application data directory:
 
-## Belgeler
+```text
+~/Library/Application Support/Godot/app_userdata/Son Bilye/son_bilye_save.json
+```
 
-- [docs/TASARIM.md](docs/TASARIM.md): tasarım kararları, varsayımlar ve kod yapısı.
-- [docs/EKONOMI.md](docs/EKONOMI.md): sabit ekonomi tabloları ve dengeleme simülasyonu (otomatik üretilir).
+This is the current save-data path used by the project. The folder name may differ from the game's English display name.
 
-## Ekonomi modelini yeniden üretmek
+## Gameplay and Controls
+
+### Main Menu
+
+The game starts from the main menu, which provides the following options:
+
+- Continue
+- New Game
+- Settings
+- Quit
+
+### Basic Controls
+
+| Input | Action |
+|---|---|
+| Space | Drop the selected number of marbles |
+| Drop button | Drop marbles using the selected batch size |
+| Mouse | Interact with menus, upgrades, objects, and game systems |
+| Esc | Open the pause menu or close certain dialogs |
+
+### Game Interface
+
+**Left Panel**
+
+- Cash balance and installment payments
+- Upgrade and automation cards
+- Marble Polishing side activity
+
+**Center / Desk**
+
+- Calendar displaying the current day
+- Story letters and events
+- Debt Ledger showing installment payments
+- Marble collection jar
+- Interactive telephone
+
+**Right Panel**
+
+- Ticket indicator
+- Achievements and menu
+- Marble Wheel and Peg Wheel
+- Available pegs and placement controls
+- End Day button
+
+### Phone Events
+
+Characters can contact the player through the in-game phone.
+
+- Friendly characters may grant **Fire Mode** for 15 seconds, doubling gameplay speed and removing the airborne marble limit.
+- Sadık Bey may call to remind the player about outstanding installments.
+- Depending on the payment status, the player may be able to pay immediately or face a penalty decision.
+
+### End-of-Day Progression
+
+At the end of each day, the player can:
+
+1. Review daily statistics and earnings.
+2. Finish the current day.
+3. Access the Ticket Tree progression system.
+4. Begin the next day.
+
+## Project Structure
+
+| Directory | Description |
+|---|---|
+| `assets/` | Artwork, sprites, fonts, and visual assets |
+| `scenes/` | Godot scenes and interface layouts |
+| `scripts/` | GDScript gameplay systems |
+| `data/` | Game configuration and economy data |
+| `docs/` | Design decisions, documentation, and economy reports |
+| `tools/` | Python utilities for balancing, testing, and asset processing |
+
+## Economy System and Balancing
+
+The game uses a predefined economy model rather than dynamically recalculating its balancing values during gameplay.
+
+Python utilities are used to calibrate daily financial requirements, generate game economy data, and produce reports.
+
+### Calibrate the Economy
 
 ```bash
 python3 tools/economy_model.py calibrate
 ```
 
+Calibrates daily tariffs and installment values. This operation may update values in the economy model source file.
+
+### Export Economy Data
+
 ```bash
 python3 tools/economy_model.py export
 ```
+
+Generates the `data/economy.json` file used by the game.
+
+### Generate Economy Report
 
 ```bash
 python3 tools/economy_model.py report
 ```
 
-Yazı tipindeki "5" rakamının düzeltilmiş hâli (`assets/fonts/PixelifySans-SB.ttf`) özgün dosyadan üretilir:
+Generates the economy documentation in `docs/EKONOMI.md`.
+
+### Analyze Marble Abilities
+
+```bash
+python3 tools/economy_model.py balls
+```
+
+Analyzes marble ability returns based on rarity.
+
+## Asset Processing Tools
+
+The project also includes Python scripts for preparing pixel-art assets and fonts.
+
+### Font Processing
 
 ```bash
 python3 tools/patch_font.py
 ```
 
-Üretilmiş görselleri gerçek piksel ızgarasına indirmek (magenta arka plan şeffaf olur):
+Generates the modified `assets/fonts/PixelifySans-SB.ttf` font from its original source.
+
+### Pixel-Art Conversion
 
 ```bash
 python3 tools/pixelize_art.py assets/art/src/tekin_raw.png assets/art/portrait_tekin.png --key
 ```
 
-Üretilmiş bir sprite sayfasını tek tek sprite'lara bölmek ("-" o sıradaki öğeyi atlar):
+Converts artwork to the intended pixel grid, including transparency processing for the magenta background.
+
+### Sprite Sheet Processing
 
 ```bash
 python3 tools/slice_sheet.py assets/art/src/balls_raw.png assets/art/balls demir,cam,kil,kaucuk,bakir,miknatis,volkan,altin,-,-,-,ikiz,kuyruklu,anka,kara_inci --min 15 --pitch-min 8 --hue-tol 0.035
 ```
 
-Top yeteneklerinin nadirliğe göre getirisi: `python3 tools/economy_model.py balls`.
+Extracts individual sprites from a source sprite sheet. A hyphen (`-`) skips the corresponding item.
 
-`calibrate` günlük tarife ve taksitleri bulur (sonucu `tools/economy_model.py` içine yazılır), `export` oyunun okuduğu
-`data/economy.json` dosyasını, `report` ise `docs/EKONOMI.md` belgesini üretir. Oyun çalışırken hiçbir değer dinamik hesaplanmaz.
+## Developer Tools and Testing
 
-## Geliştirici argümanları
+The project includes command-line arguments for debugging, automated gameplay, state manipulation, probability verification, and screenshot generation.
 
-`--` sonrasına yazılır; gerçek kayda dokunmamak için `--test-save` kullan.
+Developer arguments are passed after `--` when launching the Godot project.
 
-| Argüman | İşlev |
+**Important:** Use `--test-save` to avoid modifying your normal game progress during testing.
+
+### Save and Startup
+
+| Argument | Description |
 |---|---|
-| `--test-save` / `--fresh` | Ayrı test kaydı kullan / onu sil |
-| `--skip-menu` / `--menu` | Ana menüyü atla / zorla göster |
-| `--open=tree`, `--pause`, `--edit`, `--jackpot-fx` | Pencere, duraklatma, çivi düzenleyici, Jackpot efekti |
-| `--skip-story` | Gün başı hikâye penceresini açma |
-| `--cash=N`, `--day=N`, `--tickets=N` | Durum ayarla |
-| `--buy=ball_level:5,board_level:2` | Mağazadan satın al (kurallara uyar) |
-| `--spin=ball:3,peg:5`, `--give-pegs=huni:1`, `--place=3:1:huni`, `--select-ball=kara_inci` | Slot/çivi/top |
-| `--pay-all`, `--open-prestige`, `--do-prestige` | Taksit ve gün kapanışı |
-| `--demo`, `--autoplay`, `--timescale=N` | Otomatik atış / hata ayıklama oyuncusu / hızlandırma |
-| `--verify-probs` | Her tahta seviyesinde kesin olasılık ile 200.000 atışlık Monte Carlo karşılaştırması; ayrıca animasyonun gerçek iniş noktalarından okunan sonuçların tahtada yazan olasılıklarla karşılaştırması |
-| `--wheel=ball`, `--ui-spin=ball+peg` | Çark penceresini aç / açıp çevir |
-| `--tree-phase`, `--open-prestige` | Günü kapatıp Bilet Ağacı aşamasına geç / gün sonu ekranını aç |
-| `--win=1440x810`, `--crop=x,y,w,h` | Pencere boyutu / ekran görüntüsünden 2x yakın plan |
-| `--lang=tr`, `--toggle-lang` | Dili zorla / açılıştan kısa süre sonra dili değiştir (yeniden kurulum testi) |
-| `--sprite-sheet=yol.png` | Tüm top/çivi sprite karelerini inceleme sayfalarına dök |
-| `--measure`, `--print` | Atış başı net sonucu / durumu çıkışta yazdır |
-| `--seconds=N --screenshot=yol.png` | N oyun saniyesi sonra ekran görüntüsü alıp çık |
-| `--give-balls=N`, `--wheel-call=SN:_on_sell` | Tüm topları N ustalık yıldızıyla ver (kopya testi) / SN saniye sonra çark penceresinde yöntem çağır |
-| `--phone=good` / `--phone=threat`, `--answer` | Telefonu yarım saniye içinde çaldır / çalınca arama penceresini aç |
-| `--call-act=pay\|hang\|boost`, `--boost` | Açık arama penceresinde 2 sn sonra düğmeye bas / Ateş Modunu hemen başlat |
+| `--test-save` | Use a separate test save |
+| `--fresh` | Delete the test save |
+| `--skip-menu` | Skip the main menu |
+| `--menu` | Force the main menu to appear |
+| `--skip-story` | Skip the beginning-of-day story window |
+
+### Game State and Progression
+
+| Argument | Description |
+|---|---|
+| `--cash=N` | Set the available cash |
+| `--day=N` | Set the current day |
+| `--tickets=N` | Set the number of tickets |
+| `--buy=ball_level:5,board_level:2` | Purchase specified upgrades using game rules |
+| `--pay-all` | Pay outstanding installments |
+| `--open-prestige` | Open the end-of-day progression screen |
+| `--do-prestige` | Execute the progression action |
+| `--tree-phase` | Move to the Ticket Tree phase |
+
+### Gameplay and Simulation
+
+| Argument | Description |
+|---|---|
+| `--demo` | Enable automatic marble dropping |
+| `--autoplay` | Run the debugging player |
+| `--timescale=N` | Adjust simulation speed |
+| `--verify-probs` | Compare exact board probabilities against a 200,000-drop Monte Carlo simulation and observed landing results |
+| `--spin=ball:3,peg:5` | Trigger specified wheel spins |
+| `--give-pegs=huni:1` | Add a specified peg |
+| `--place=3:1:huni` | Place a specified peg |
+| `--select-ball=kara_inci` | Select a specific marble |
+| `--give-balls=N` | Grant all marbles with the specified mastery level |
+
+### Interface and Visual Testing
+
+| Argument | Description |
+|---|---|
+| `--open=tree` | Open the Ticket Tree |
+| `--pause` | Open the pause menu |
+| `--edit` | Open the peg editor |
+| `--jackpot-fx` | Trigger the jackpot effect |
+| `--wheel=ball` | Open the Marble Wheel |
+| `--ui-spin=ball+peg` | Open and spin both wheels |
+| `--win=1440x810` | Set the game window size |
+| `--crop=x,y,w,h` | Specify a screenshot crop |
+| `--lang=tr` | Force Turkish localization |
+| `--toggle-lang` | Switch languages shortly after startup |
+| `--sprite-sheet=path.png` | Export marble and peg sprite inspection sheets |
+
+### Debugging and Phone Events
+
+| Argument | Description |
+|---|---|
+| `--measure` | Print the net result per marble drop |
+| `--print` | Print the game state on exit |
+| `--seconds=N --screenshot=path.png` | Capture a screenshot after N in-game seconds |
+| `--phone=good` | Trigger a friendly phone call |
+| `--phone=threat` | Trigger a threatening phone call |
+| `--answer` | Automatically answer a phone call |
+| `--call-act=pay\|hang\|boost` | Select an action in the active phone dialog |
+| `--boost` | Activate Fire Mode |
+| `--wheel-call=SN:_on_sell` | Invoke a wheel-window method after a specified delay |
+
+## Documentation
+
+Additional technical documentation is available in the repository:
+
+- [Game Design and Architecture](docs/TASARIM.md) — Design decisions, assumptions, and code structure.
+- [Economy and Balancing](docs/EKONOMI.md) — Economy tables and balancing simulations.
+
+*These technical documents are currently written in Turkish.*
+
+## Screenshots
+
+Gameplay screenshots will be added here.
+
+## Development Status
+
+Personal game development project.
+
+The repository contains the Godot project files, gameplay systems, economy tools, and supporting technical documentation.
